@@ -9,8 +9,10 @@ const morgan = require("morgan");
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "http://localhost:3000" } });
-
+//const io = new Server(server, { cors: { origin: "http://localhost:3000" } });
+const io = new Server(server, {
+      cors: { origin: "https://chat-f2c45.web.app" },
+});
 const init_DB = {
       host: "localhost",
       port: "3306",
